@@ -19,7 +19,7 @@ buildscript {
     repositories {
         mavenCentral()
         //jcenter()
-        maven { url "http://jcenter.bintray.com"}
+        //maven { url "http://jcenter.bintray.com"}
     }
 
     dependencies {
@@ -39,7 +39,7 @@ subprojects {
 
     repositories {
         mavenCentral()
-        maven { url "http://jcenter.bintray.com"}
+        //maven { url "http://jcenter.bintray.com"}
     }
 
     dependencies {
