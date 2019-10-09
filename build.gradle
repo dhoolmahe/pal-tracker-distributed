@@ -18,12 +18,14 @@ buildscript {
 
     repositories {
         mavenCentral()
-        jcenter()
+        //jcenter()
+        maven { url "http://jcenter.bintray.com"}
     }
 
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
         classpath "mysql:mysql-connector-java:$mysqlVersion"
+       
     }
 }
 
@@ -37,7 +39,7 @@ subprojects {
 
     repositories {
         mavenCentral()
-        jcenter()
+        maven { url "http://jcenter.bintray.com"}
     }
 
     dependencies {
