@@ -2,11 +2,11 @@ applications:
 - name: tracker-timesheets
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
-  - route: timesheets-pal-mahi.apps.chicken.pal.pivotal.io
+  - route: timesheets-pal-mahi.cfapps.io
   memory: 500M
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://timesheets-pal-mahi.apps.chicken.pal.pivotal.io
+    REGISTRATION_SERVER_ENDPOINT: https://timesheets-pal-mahi.cfapps.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     JAVA_OPTS: '-Xmx250m -Xss100m'
   services:
