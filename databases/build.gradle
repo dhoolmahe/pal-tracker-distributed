@@ -5,5 +5,3 @@ subprojects {
     apply plugin: LocalMigrationPlugin
     apply plugin: CfMigrationPlugin
 }
-
- 
