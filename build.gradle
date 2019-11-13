@@ -16,7 +16,7 @@ buildscript {
         jsonPathVersion = "2.4.0"
         springCloudVersion = "Finchley.SR2"
         springCloudServicesClientLibrariesVersion = "2.0.2.RELEASE"
-        springCloudCommonsVersion = "2.0.0.RELEASE"
+        springCloudCommonsVersion = "2.0.2.RELEASE"
     }
 
     repositories {
@@ -48,10 +48,16 @@ subprojects {
         compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
         compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
         compile "org.slf4j:slf4j-api:$slf4jVersion"
-
+        compile "org.springframework.boot:spring-boot-starter-security"
         testCompile "junit:junit:$junitVersion"
         testCompile "org.mockito:mockito-core:$mockitoVersion"
         testCompile "org.assertj:assertj-core:$assertJVersion"
+
+        compile "org.springframework.security:spring-security-config"
+        //compile group: "org.springframework.security", name: "spring-security-config", version: "$springCloudCommonsVersion"
+        //compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.0.9.RELEASE'
+
+
     }
 
     test {
