@@ -1,5 +1,5 @@
 applications:
-- name: tracker-allocations-mahi
+- name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocations-pal-mahi.cfapps.io
@@ -11,4 +11,4 @@ applications:
     JAVA_OPTS: '-Xmx250m -Xss100m'
   services:
   - tracker-allocations-database
-  - tracker-service-registry-mahi
+  - tracker-service-registry

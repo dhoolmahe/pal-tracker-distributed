@@ -1,5 +1,5 @@
 applications:
-- name: tracker-timesheets-mahi
+- name: tracker-timesheets
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
   - route: timesheets-pal-mahi.cfapps.io
@@ -11,5 +11,4 @@ applications:
     JAVA_OPTS: '-Xmx250m -Xss100m'
   services:
   - tracker-timesheets-database
-  - tracker-service-registry-mahi
-s
+  - tracker-service-registry
