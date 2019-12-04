@@ -3,12 +3,15 @@ applications:
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
   - route: backlog-pal-mahi.cfapps.io
-  memory: 500M
+  memory: 1G
   instances: 1
   env:
-    #REGISTRATION_SERVER_ENDPOINT: https://registration-pal-mahi.cfapps.io/
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    GRANT_TYPE: client_credentials
     JAVA_OPTS: '-Xmx250m -Xss100m'
   services:
   - tracker-backlog-database
   - tracker-service-registry
+  - tracker-circuit-breaker-dashboard
+  - tracker-sso
+  - tracker-config-server

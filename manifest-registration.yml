@@ -3,11 +3,14 @@ applications:
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
   - route: registration-pal-mahi.cfapps.io
-  memory: 500M
+  memory: 1G
   instances: 1
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    GRANT_TYPE: client_credentials
     JAVA_OPTS: '-Xmx250m -Xss100m'
   services:
   - tracker-registration-database
   - tracker-service-registry
+  - tracker-sso
+  - tracker-config-server
